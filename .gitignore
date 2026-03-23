@@ -2,6 +2,10 @@ vendor/
 .env
 node_modules/
 
+# IDE/editor
+.idea/
+.vscode/
+
 # Local assistant/agent artifacts
 .claude/
 .init/
@@ -9,3 +13,13 @@ agent/
 .agent/
 .codex/
 AGENTS.md
+
+# Runtime/log artifacts
+logs/*.log
+uploads/*
+!uploads/.htaccess
+
+# Local backups/OS noise
+*.bak
+.DS_Store
+Thumbs.db

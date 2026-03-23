@@ -1,0 +1,31 @@
+# Hide sensitive files from directory listing
+IndexIgnore *.json *.js *.lock vendor .htaccess css img sql account.php booking.php bookings.php charge.php checkout.php connect_db.php delete_review.php filter_example.php getmovie.php like_dislike_review.php listings.php login.php login_action.php login_tools.php logout.php movie.php movie_listing.php register.php remove_booking.php save_review.php show1.php show2.php show3.php submit_review.php update_review.php user_account.php includes styles node_modules scss check_duplicates.php db_connect.php
+IndexOptions FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=*
+IndexOrderDefault Descending Date
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to .env file
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny access to config files
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>

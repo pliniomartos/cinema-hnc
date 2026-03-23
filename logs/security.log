@@ -1,0 +1,9 @@
+[2026-03-16 22:37:51] [REGISTER_SUCCESS] [IP: ::1] Username: plino
+[2026-03-16 22:38:06] [LOGIN_ACTION_SUCCESS] [IP: ::1] User: plino
+[2026-03-16 23:16:12] [BOOKING_SUCCESS] [IP: ::1] Booking ID: 1, User: plino
+[2026-03-16 23:21:03] [BOOKING_SUCCESS] [IP: ::1] Booking ID: 2, User: plino
+[2026-03-16 23:24:26] [LOGIN_ACTION_SUCCESS] [IP: ::1] User: admin
+[2026-03-16 23:32:51] [LOGIN_ACTION_SUCCESS] [IP: ::1] User: admin
+[2026-03-17 00:23:27] [BOOKING_SUCCESS] [IP: ::1] Booking ID: 3, User: admin
+[2026-03-17 11:52:30] [VALIDATE_FAILURE] [IP: ::1] Email: pliniohernandes@gmail.com
+[2026-03-17 13:32:12] [LOGIN_ACTION_SUCCESS] [IP: ::1] User: admin

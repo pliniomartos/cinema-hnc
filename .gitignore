@@ -1,0 +1,11 @@
+vendor/
+.env
+node_modules/
+
+# Local assistant/agent artifacts
+.claude/
+.init/
+agent/
+.agent/
+.codex/
+AGENTS.md

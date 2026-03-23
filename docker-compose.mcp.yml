@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+  # MCP Gateway - Central hub for MCP servers
+  mcp-gateway:
+    build:
+      context: ./docker/mcp-gateway
+      dockerfile: Dockerfile
+    container_name: mcp-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - GATEWAY_PORT=3000
+      - GATEWAY_HOST=0.0.0.0
+    volumes:
+      - ./mcp-servers:/app/servers:ro
+      - mcp-logs:/app/logs
+    networks:
+      - mcp-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # filesystem MCP Server - File operations
+  mcp-filesystem:
+    image: mcp/filesystem:latest
+    container_name: mcp-filesystem
+    volumes:
+      - ./:/workspace:ro
+      - ./logs:/logs
+    environment:
+      - MCP_SERVER_NAME=filesystem
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+  # fetch MCP Server - HTTP requests
+  mcp-fetch:
+    image: mcp/fetch:latest
+    container_name: mcp-fetch
+    environment:
+      - MCP_SERVER_NAME=fetch
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+  # playwright MCP Server - Browser automation
+  mcp-playwright:
+    image: mcp/playwright:latest
+    container_name: mcp-playwright
+    environment:
+      - MCP_SERVER_NAME=playwright
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+  # git MCP Server - Git operations
+  mcp-git:
+    image: mcp/git:latest
+    container_name: mcp-git
+    volumes:
+      - ./:/workspace:ro
+    environment:
+      - MCP_SERVER_NAME=git
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+  # brave-search MCP Server - Web search
+  mcp-brave-search:
+    image: mcp/brave-search:latest
+    container_name: mcp-brave-search
+    environment:
+      - MCP_SERVER_NAME=brave-search
+      - BRAVE_API_KEY=${BRAVE_API_KEY:-}
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+  # postgres MCP Server - Database operations
+  mcp-postgres:
+    image: mcp/postgres:latest
+    container_name: mcp-postgres
+    environment:
+      - MCP_SERVER_NAME=postgres
+      - DATABASE_URL=${DATABASE_URL:-}
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+networks:
+  mcp-network:
+    driver: bridge
+
+volumes:
+  mcp-logs:

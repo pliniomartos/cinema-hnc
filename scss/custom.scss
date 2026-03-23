@@ -1,0 +1,57 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// Custom colors
+$custom-colors: (
+    "orange-2": #FFCB8F,
+    "orange-1": #FFA63F,
+    "orange0": #DC7600,
+    "orange1": #975100,
+    "orange2": #331B00,
+    "yellow-2": #FFE58F,
+    "yellow-1": #FFD33F,
+    "yellow0": #DCAA00,
+    "yellow1": #977500,
+    "yellow2": #332700,
+    "red-2": #FF928F,
+    "red-1": #FF443F,
+    "red0": #DC0600,
+    "red1": #970400,
+    "red2": #330100,
+    "black": #000000,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// custom css
+.gradient {
+    background: radial-gradient(ellipse, var(--bs-yellow-1) 0%, var(--bs-orange0) 100%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #333 25%, #000 100%);
+}
+/* scrollbar styles */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bs-orange0);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-orange-1);
+}
+/* end scrollbar styles */
+

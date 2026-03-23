@@ -1,0 +1,3 @@
+IndexIgnore *.json *.js *.lock vendor .htaccess css img sql account.php booking.php bookings.php charge.php checkout.php connect_db.php delete_review.php filter_example.php getmovie.php like_dislike_review.php listings.php login.php login_action.php login_tools.php logout.php movie.php movie_listing.php register.php remove_booking.php remove_booking.php save_review.php show1.php show2.php show3.php submit_review.php update_review.php user_account.php includes styles node_modules scss check_duplicates.php db_connect.php
+IndexOptions FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=*
+IndexOrderDefault Descending Date

@@ -26,20 +26,26 @@ A PHP/MySQL cinema web application with user accounts, movie listings, bookings,
 
 ```text
 .
-├── home.php
-├── movie_listing.php
-├── movie.php
-├── checkout.php
-├── charge.php
-├── account.php
-├── bookings.php
-├── admin.php
-├── includes/
-├── sql/
-├── uploads/
-├── logs/
-├── .env.example
-└── setup_database.sql
+cinema
+    ├───img
+    ├───includes
+    ├───logs
+    ├───phpqrcode
+    │   ├───bindings
+    │   │   └───tcpdf
+    │   ├───cache
+    │   │   ├───mask_0
+    │   │   ├───mask_1
+    │   │   ├───mask_2
+    │   │   ├───mask_3
+    │   │   ├───mask_4
+    │   │   ├───mask_5
+    │   │   ├───mask_6
+    │   │   └───mask_7
+    │   └───tools
+    ├───scss
+    ├───sql
+    └───uploads
 ```
 
 ## Local Setup (Windows/WAMP)

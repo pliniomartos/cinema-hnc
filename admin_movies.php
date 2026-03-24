@@ -62,8 +62,16 @@ function getTrailerUrl($title) {
  * Falls back to YouTube search URL when not available.
  */
 function fetchTrailerFromTMDB($imdb_id, $fallbackTitle = '') {
+<<<<<<< HEAD
     $tmdbKey = defined('TMDB_API_KEY') ? TMDB_API_KEY : ($_ENV['TMDB_API_KEY'] ?? '');
     if (empty($tmdbKey)) return '';
+=======
+    $tmdbKey = defined('TMDB_API_KEY') ? TMDB_API_KEY : '';
+
+    if (empty($tmdbKey) || empty($imdb_id)) {
+        return $fallbackTitle ? getTrailerUrl($fallbackTitle) : false;
+    }
+>>>>>>> 5b18e8dd6f9eb264d8b6cc3bd2cbb8bf6dbd4bfc
 
     $findUrl = 'https://api.themoviedb.org/3/find/' . urlencode($imdb_id)
         . '?api_key=' . urlencode($tmdbKey)

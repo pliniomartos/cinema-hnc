@@ -6,14 +6,6 @@ node_modules/
 .idea/
 .vscode/
 
-# Local assistant/agent artifacts
-.claude/
-.init/
-agent/
-.agent/
-.codex/
-AGENTS.md
-
 # Runtime/log artifacts
 logs/*.log
 uploads/*

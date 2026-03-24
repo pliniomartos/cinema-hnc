@@ -90,6 +90,44 @@ npm install
 - Use Stripe **test** keys only in development
 - Remove/rotate any credentials if they were ever committed
 
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home_page.png)
+
+### Movie Listing
+![Movie Listing](screenshots/movie_listing.png)
+
+### Movie Description
+![Movie Description](screenshots/movie_description.png)
+
+### Checkout
+![Checkout](screenshots/checkout.png)
+
+### Stripe Payment
+![Stripe Payment](screenshots/stripe_payment.png)
+
+### QR Code Generation
+![QR Code Generation](screenshots/qr_code_generation.png)
+
+### Bookings History
+![Bookings History](screenshots/bookings_history.png)
+
+### User Account
+![User Account](screenshots/user_account.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+### Admin All Bookings
+![Admin All Bookings](screenshots/admin_all_bookings.png)
+
+### Movies Management
+![Movies Management](screenshots/movies_management.png)
+
+### User Management
+![User Management](screenshots/user_management.png)
+
 ## Related Docs
 
 - `QUICK_START.md`

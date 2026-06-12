@@ -130,14 +130,6 @@ npm install
 ### User Management
 ![User Management](screenshots/user_management.png)
 
-## Related Docs
-
-- `QUICK_START.md`
-- `DEPLOYMENT_GUIDE.md`
-- `SECURITY_UPGRADE_SUMMARY.md`
-- `STRIPE_SETUP.md`
-
->>>>>>> 7ed3e0c1f66df7bfcde8b59cdd2e8cfa140aa22b
 ## License
 
 Educational project (HNC coursework).

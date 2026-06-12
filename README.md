@@ -90,13 +90,6 @@ npm install
 - Use Stripe **test** keys only in development
 - Remove/rotate any credentials if they were ever committed
 
-## Related Docs
-
-- `QUICK_START.md`
-- `DEPLOYMENT_GUIDE.md`
-- `SECURITY_UPGRADE_SUMMARY.md`
-- `STRIPE_SETUP.md`
-
 ## License
 
-Educational project (HNC coursework). Add a LICENSE file if you want open-source reuse permissions.
+Educational project (HNC coursework).
